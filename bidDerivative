@@ -172,7 +172,7 @@ In essence;
 
 '..the market will fail as information is no longer perfect and those with extra information can exploit their advantage, this should present no problem if the wishes of the consumer are actively / accurately reflected by the producer - moreover how preferences of the shopper could better be turned into actionable returns for either reseller products or new brands..'
 
-- [Procurement / Data warehousing software]
+[Procurement / Data warehousing software]
 
 Using live data, strategising both production and sale of products
 ------------------------------------------------------------------
@@ -489,6 +489,7 @@ Percentage change in quantity demanded of good X / Percentage change in price of
 As with income elasticity, the sign for cross-elasticity matters. A positive sign means good Y's higher price has caused demand for good X to increase. This implies the two goods at this stage are either substitutes or compliments. If the sign is negative, and demand for X fell, when the price of Y rose, the goods must be compliments. And if the demand for X does not change, the two goods are independent of each other.
 
 '..Black-Scholes price calculations are more granular in the sense that they use a number of minutes remaining until options expiration. These calculations are specifically intended to take into account all the remaining time. The difference becomes increasingly significant as expiration approaches - the final moments of the cycle represented as a fraction of the remaining days. Forward modeling should, therefore, be based on total time remaining, calculated in minutes, as a percentage of trade time..different volatility values can be used and the results compared when determining the fair value of a product. A professional bidder might, calculate volatility using different-length windows - 20 days to represent the past month and 90 days to measure an entire quarter - in addition to summative factors based on trade window. Each result would generate a different option price when plugged into this pricing model (Black-Scholes) or another..'
+
 
 Professional trades and spot bids
 ---------------------------------
