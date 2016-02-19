@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<project name="Bid Derivative" company=".[drm] co*" manager="Obiora Okwudili" phase="" project-start="20150324T000000Z" mrproject-version="2" calendar="1">
+  <properties>
+    <property name="Budget" type="int" owner="project" label="Budget" description="Theoretical: Financial"/>
+  </properties>
+  <properties>
+    <property name="Budget" value="0"/>
+  </properties>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+        <overridden-day-type id="1">
+          <interval start="1100" end="2000"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20160124" type="day-type" id="0"/>
+      </days>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Research" note="10 - 15 per. hr.  avg. 7 hours per day&#10;&#10;@ &#xA3;350 per mnth.&#10;&#10;&#xA3;14,000 per yr.&#10;&#10;note: Research encapsulates entire project time&#10;" work="8870400" start="20150324T000000Z" end="20150819T150000Z" work-start="20150324T080000Z" percent-complete="30" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Subject Specific" note="" work="4435200" start="20150324T000000Z" end="20150819T150000Z" work-start="20150324T080000Z" percent-complete="90" priority="1" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20150324T000000Z"/>
+      </task>
+      <task id="3" name="Documentation: Proposal" note="" work="4435200" start="20150324T000000Z" end="20150819T150000Z" work-start="20150324T080000Z" percent-complete="100" priority="1" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20150324T000000Z"/>
+      </task>
+    </task>
+    <task id="4" name="* Review Time" note="" work="4435200" start="20150824T000000Z" end="20160119T150000Z" work-start="20150824T080000Z" percent-complete="90" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20150824T000000Z"/>
+      <predecessors>
+        <predecessor id="1" predecessor-id="3" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="5" name="Planning" note="" work="2505600" start="20160119T000000Z" end="20160313T130000Z" work-start="20160119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="6" name="Document Review" note="" work="1612800" start="20160119T000000Z" end="20160313T130000Z" work-start="20160119T080000Z" percent-complete="6" priority="1" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20160119T000000Z"/>
+        <predecessors>
+          <predecessor id="1" predecessor-id="4" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="7" name="Research: Sandbox Enviro + APIs" note="" work="806400" start="20160119T000000Z" end="20160215T090000Z" work-start="20160119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20160119T000000Z"/>
+      </task>
+      <task id="8" name="UML" note="" work="86400" start="20160122T000000Z" end="20160124T160000Z" work-start="20160122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20160122T000000Z"/>
+      </task>
+    </task>
+    <task id="9" name="Development" note="" work="86400" start="20150324T000000Z" end="20150324T170000Z" work-start="20150324T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="10" name="Research: Framework" note="" work="28800" start="20150324T000000Z" end="20150324T170000Z" work-start="20150324T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="11" name="Java: Programming" note="" work="28800" start="20150324T000000Z" end="20150324T170000Z" work-start="20150324T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="12" name="Debugging" note="" work="28800" start="20150324T000000Z" end="20150324T170000Z" work-start="20150324T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="Technical Manuals" short-name="I.t. Books" type="2" units="0" email="" note="" std-rate="28.299999237060547" calendar="1"/>
+    <resource id="2" name="Economics" short-name="Financial / Trade" type="2" units="0" email="" note="" std-rate="10"/>
+    <resource id="3" name="Enterprise Systems" short-name="Software Eng." type="2" units="0" email="" note="" std-rate="0"/>
+    <resource id="4" name="Developer Notes" short-name="APIs" type="2" units="0" email="" note="" std-rate="0"/>
+    <resource id="5" name="Notes" short-name="Research notes" type="2" units="0" email="ookwudili@live.co.uk" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="10" resource-id="1" units="100"/>
+    <allocation task-id="1" resource-id="2" units="100"/>
+    <allocation task-id="2" resource-id="2" units="100"/>
+    <allocation task-id="8" resource-id="3" units="100"/>
+    <allocation task-id="1" resource-id="4" units="100"/>
+    <allocation task-id="6" resource-id="4" units="100"/>
+    <allocation task-id="7" resource-id="4" units="100"/>
+    <allocation task-id="4" resource-id="5" units="100"/>
+  </allocations>
+</project>
