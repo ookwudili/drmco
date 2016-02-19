@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Document Mgmt. - bid derivative</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    	 <style type="text/css">
+
+@import url("styles.css");
+
+// desktop
+
+@media screen (min-width:480px) {
+
+*html body{
+
+line-height: 120%;
+
+font-family: Georgia, Roman, Times, Serif;
+
+font-size: 12px;
+
+font-weight: normal;
+
+background-color: "#FFFFFF";
+
+padding: 0;
+
+margin: 0;
+
+box-sizing: border-box;
+
+}
+
+p { text-align: justify; margin: 5 5 5 5px; TEXT-INDENT: 0em; }
+
+A {TEXT-DECORATION: NONE;
+
+	border-bottom: 1px dotted #CCCCCC; width: 100%;
+}
+
+A:link {
+
+        COLOR: white
+
+        font-size-adjust: 11px;
+
+        font-stretch: none;
+
+        text-decoration: none;
+
+        text-transform: none	 
+
+}
+
+
+
+A:visited {
+
+        COLOR: #666666; 
+
+        TEXT-INDENT: 0em;
+}
+
+A:hover {
+
+
+	background-color: #FFCC66;
+
+}
+
+
+A:visited { 
+
+        TEXT-INDENT: 0em;
+}
+
+A:hover {
+
+	background-color: #FFCC66;
+
+}
+
+.embeded {
+
+WIDTH: 350pt; 
+
+HEIGHT: 480pt;
+
+MARGINWIDTH: 0em;
+
+MARGINHEIGHT: 0em;
+
+CELLPADDING: 0px;
+
+CELLSPACING: 0px;
+
+}
+
+
+dd { 
+
+margin-left: 0em;
+
+} html > body .content{
+
+color: white;
+
+font-weight: normal;
+
+margin-left: 0em;
+
+TEXT: #FFFFFF;
+
+}
+
+.qWhite{
+
+	font-weight: bold;
+
+	background-color: white;
+
+}
+
+.qandaTtl {
+
+	font-size: 14pt;	
+
+}
+
+ol { list-style-type: lower-roman;}
+ol li:before { counter-increment: ordered;
+               content: counters(ordered,"."); }
+
+ol {counter-reset: ordered;}
+li {display: block; }
+ol li::before { counter-increment: ordered;
+               content: "" counters(ordered,".") "."; counter-increment: ordered }
+
+.underline { border-bottom: 1px dotted #CCCC; margin: 0px; }
+
+.loginForm {
+
+font-size: 11px;
+
+font-weight: normal;
+
+text-decoration: none;
+
+color: #666666;
+
+padding-left: 2px;
+
+border: 1px solid #339999;
+
+margin: 0px;
+
+}
+
+
+.content {
+
+color: white;
+
+font-size: 11px;
+
+font-weight: normal;
+
+margin-left: 0em;
+
+TEXT: #FFFFFF;
+
+}
+
+.parent {
+
+position: absolute;
+
+top: 20px;
+
+width: 450px;
+
+height: 100%;
+
+color: #666666;
+
+padding: 5 5 5 5px;
+
+}
+
+#framecontent {
+
+position: absolute;
+
+bottom: 0px;
+
+left: 0px:
+
+height: 75px;
+
+width: 100%;
+
+margin-left: 0px;
+
+background: white;
+
+text-align: right;
+
+overflow: hidden;
+
+position: fixed;
+
+}
+
+#topframe {
+
+position: absolute;
+
+top: 0px;
+
+left: 0px:
+
+height: 75px;
+
+width: 100%;
+
+margin-left: 0px;
+
+background: white;
+
+text-align: right;
+
+border-right: dotted 1px black;
+
+overflow: hidden;
+
+position: fixed;
+
+}
+
+.inner{ margin: 10px; border-top: dotted 1px GREY; }
+
+}
+
+	
+* body{
+  
+  box-sizing: border-box;
+  
+  line-height: 160%/1.6em;
+  
+  font-family: Georgia, Roman, Times, Serif;
+  
+  font-size: 16px;
+
+  color: lighten(black, 40%);
+  
+  position: relative;
+  
+}
+
+.red { color: #aaa; }
+ 
+p {
+	
+	margin-top: 10px;
+
+	margin-left: 200px;
+
+	margin-right: 100px;
+	
+	margin-bottom: 10px;
+ 
+	font-weight: 250;
+	
+	line-height: 25px;
+
+	text-align: justify;
+	
+	padding: 0px 60px;
+	
+	TEXT-INDENT: 0em;
+	
+	voice-family: "\"}\"";
+	 
+	 voice-family: inherit;
+	
+} html > body BLOCKQUOTE {
+	
+margin-top: 25px;
+
+margin-left: 250px;
+
+margin-right: 150px;
+
+margin-bottom: 25px;
+
+border-left: solid 3px #ccc;
+
+padding: 0px 60px;
+
+line-height: 30px;
+
+TEXT-INDENT: 0em;
+
+padding-left-value: 0px;
+
+padding-left-ltr-source: physical;
+
+padding-left-rtl-source: physical;
+
+text-align: justify;
+
+font-weight: 300;
+
+font-style: italic;
+
+font-color: #ccc;
+
+display: block;
+
+}
+
+.blockquoteTop { 
+
+border-top: 1px solid #ccc;
+
+color: lighten(#ddd, 20%)
+
+margin-top: 25px;
+
+margin-left: 250px;
+
+margin-right: 150px;
+
+margin-bottom: 25px;
+
+display: block;
+
+}
+
+h2{
+      font-weight: 300;
+      
+      font-size: 30px;
+      
+      margin-top: 25px;
+
+text-align: center;
+
+	left-margin: 300px;
+
+      margin-bottom: 10px;
+           
+}
+
+h3{
+      font-weight: 300;
+      
+      font-size: 20px;
+      
+      margin-top: 20px;
+
+	margin-left: 100px;
+      
+      margin-bottom: 10px;
+}
+
+h4{
+      font-weight: 300;
+      
+      font-size: 15px;
+      
+      margin-top: 10px;
+      
+      margin-bottom: 10px;
+      
+}
+
+.abstract{
+
+	margin-top: 10px;
+ 
+	font-weight: 250;
+	
+	font-size: 12pt;
+
+	color: lighten(black, 40%);
+
+	font-style: normal;
+
+	background-color: yellow;
+}
+
+.parent { 
+
+valign: top;
+
+margin-top: 100px;
+
+margin-left: 0px;
+
+width:80%;
+
+}
+
+ol { list-style-type: lower-roman;}
+ol li:before { counter-increment: ordered;
+               content: counters(ordered,"."); }
+
+ol {counter-reset: ordered;}
+li {display: block; }
+ol li::before { counter-increment: ordered;
+               content: "" counters(ordered,".") "."; counter-increment: ordered }
+
+ul { margin-left: 200px; list-style-type: lower-roman;}
+ul li:before { counter-increment: ordered;
+               content: counters(ordered,"."); }
+
+ul {counter-reset: ordered;}
+li {display: block; }
+ul li::before { margin-left: 0px; counter-increment: ordered;
+               content: "" counters(ordered,".") "."; counter-increment: ordered }
+
+#framecontent {
+
+position: absolute;
+
+bottom: 0px;
+
+left: 0px:
+
+height: 75px;
+
+width: 100%;
+
+margin-left: 0px;
+
+background: white;
+
+text-align: right;
+
+overflow: hidden;
+
+position: fixed;
+
+}
+
+#leftframe {
+
+position: fixed;
+
+bottom: 400px;
+
+left: 150px:
+
+height: 75px;
+
+width: 100%;
+
+margin-left: 0px;
+
+text-align: left;
+
+voice-family: "\"}\"";
+
+voice-family: inherit;
+
+} html > body .blockquotePrint { 
+
+border-top: 1px dotted #ccc;
+
+margin-top: 25px;
+
+width: 4%;
+
+margin-right: 150px;
+
+margin-bottom: 25px;
+
+font-size: 11px;
+
+display: block;
+
+}
+
+.blockquoteNumber {
+
+color: #ccc;
+
+margin-top: 35px;
+
+width: 8%;
+
+margin-right: 150px;
+
+margin-left: 0px;
+
+margin-bottom: 25px;
+
+font-size: 16pt;
+
+display: block;
+
+font-family: Georgia;
+
+}
+
+#topframe {
+
+position: fixed;
+
+top: 0px;
+
+left: 0px:
+
+height: 75px;
+
+width: 100%;
+
+margin-left: 0px;
+
+background: white;
+
+text-align: right;
+
+overflow: hidden;
+
+}
+
+.signature { background-color: BLACK; COLOR: #FFFFFF; font-size: 11px;}
+
+.RefPnt { background-color: #CCC; COLOR: #FFFFFF; font-size: 11px;}
+
+.inner{
+
+margin: 10px;
+
+border-top: dotted 1px #bbb; 
+	
+}
+
+.outer { margin: 0px; border-bottom: dotted 1px #bbb; }
+
+</style>
+
+    <script type="text/javascript">
+
+if ( document.querySelectorAll ) {
+
+document.write('<style type="text/css">' + 'dl.toggle dd { display: none; } ' + 'dl.toggle dt { cursor: pointer; cursor: hand;}' + '</style>');
+
+}
+
+</script>
+    
+  </head>
+  <body>
+	
+<div width="350" HEIGHT="480">
+
+<div HEIGHT="30">
+<div id="topframe">
+    <div class="outer">	
+<p>
+<div align="center">
+<table>
+<tr>
+<td>DS</td>
+<td>GN</td>
+<td><span class="red">RS</span></td>
+</tr>
+<tr>
+<td>RC</td>
+<td>HM</td>
+<td>DC</td>
+</tr>
+<tr>
+<td>MM</td>
+<td>NC</td>
+<td>TN</td>
+</tr>
+</table>
+</div>
+</p>
+  </div>
+</div>
+
+<script>
+function printpage(){
+
+window.print();
+
+}
+</script>
+
+<dl class="toggle">
+<dt>
+<div id="leftframe">
+<span class="blockquotePrint" align="left">&#94 &nbsp;Chpt. 1</span>
+<span class="blockquotePrint" align="left">&#94 &nbsp;Chpt. 2</span>
+<span class="blockquotePrint" align="left">&#94 &nbsp;Chpt. 3</span>
+<span class="blockquotePrint" align="left">&#94 &nbsp;Chpt. 4</span>
+</div>
+</dt>
+
+<dd>
+<div id="leftframe">
+<span class="blockquoteNumber"><script>document.write(document.anchors[0].innerHTML);</script></span>
+</div>
+</dd>
+</dl>
+
+<div class="parent">
+
+<p><h2>.Bids Derivatives</h2></p>
+
+<blockquote>'..Through the process of inclusion and elimination of genres, outlets and outputs, the universe for projects were defined..Genre is largely a matter of defining what kind of copy does and does not qualify as what you or your market sector is searching for. A researcher may wish to look only at certain sub-genres such as 'spot' news, features or headlines, or at certain topics such as industrial, economic or international news, or take only the front page. Defining what stories are about a particular topic provides its own set of questions..'</blockquote>
+
+<p>Based on theory, it is to be proven that revenue exists to be made from the observation and dialogue of the communicator, sourcing valid research that trade warrants proportional representation in the form of advertising and vice-versa speculation that advertising fuels trade in equal proportion as part of strategic delivery.</p>
+
+<p>Whether pitching or bidding for a window in the market, use of language markers are part and parcel of preparation which define active subject, inform strategies and offer directives as to opportunities and a base from which to develop frameworks for trade which would be of advantage to all parties.</p>
+
+<p>With this regard, in the early stages the development is to build on existing frameworks / api's hosted through established vendors. Focus remains on the synthesis of ideas in communication, using joined up thinking which form convincing messages based on statistical data.</p>
+
+<span id="amalgor"><h3><a name="Amalgormation">Amalgormation</a></h3></span>
+
+<p>Illustrated in the following extract from a larger project along the same lines;</p>
+
+<blockquote><q>..According to the Government’s most recent Communications Plan, which outlined the budget for 2013 / 2014, the closure of the COI and the spending freeze on all unnecessary marketing activities implemented across the public sector has so far resulted in efficiencies of £40m since the last General Election. The Plan also stated that spending on communications would remain much lower than it was in 2009/2010 — when it stood at £532m — with the total marketing budget for 2013/2014 estimated at £236.9m. In addition, the Government revealed that it had tasked its procurement service with a review and revision of all existing communication frameworks, which will be designed to provide support, guidance and tools to the new communications hubs regarding this process..</q></blockquote>
+
+<p>The new frameworks will provide a number of benefits to the interior Government..</p>
+
+<p>Which puts forward figures for the past few years, stating revision of all existing communication procurement frameworks designed to provide for 'new communications hubs' incorporated in this process.</p>
+
+<dd>
+<div>
+
+<script>
+var txt = "";
+var person = {
+	quotea : "..the accord is the delivery of interval answers to integral questions..",
+	quoteb : ""
+	};
+
+for ( var x in person) {
+
+	txt = txt + " " + person[x];
+}
+
+document.getElementById("quoteEdit").innerHTML = txt;
+</script>
+</div>
+</dd>
+
+<span id="Strategy"><h3><a name="Strategy">Proposed Strategy</a></h3></span>
+
+<p>Much the same as recent replacement of the nine frameworks used in government procurement, the central management spend for companies offering this franchise is to be reduced, which in turn is expected to deliver individual advantage to re-sellers - who may wish to customise their trading experience.</p>
+
+<p>A reduced supply base, which aims to cut overheads and minimise storage / transit costs is expected to make it easier for communication ‘hubs’ to work strategically with suppliers, introducing a change management framework which is an alteration at given intervals in order to be of advantage to revenue streams based on product / market trends for that quarter.</p>
+
+<p>Although this abstract is not directly relevant to the project at large, the interpretation of the text forms the basic foundation from which to highlight aspects of the 'standard pricing model' introduced to support regular benchmarking and delivery of continuous project improvements which aim to offer value for money throughout the trading term. Despite the efficiencies made within communication budgets, the reduction in marketing budgets across the public sector has without a doubt had a negative impact. The proposal is to source market advantage from clusters of 10 to 15 suppliers, who are either small-to medium-sized SME's or sole traders.</p>
+
+<span id="Competition"><h3><a name="Competition">Market Competition</a></h3></span>
+
+<p>The 'perfect market concept', enables economists to predict reasonably well how firms are likely to behave and suggest policy ideas or changes. Monopolistic competition, acts as a ploy in order to give platform to the production which differ from the offerings of competitors.</p>
+
+ <p>Monopoly can outperform competition. The monopolist might use their economic profit to invest in research and development or to buy modern, productive machines. They might achieve economic scale that could mean lower rather than higher prices for consumers, becoming more receptive to market data sourced through reseller markets.</p>
+
+ <p>The market structure is a hybrid monopoly, the monopolistic part is that firms produce goods the firm has a form of monopoly in what it produces, although their good also has close substitutes; ultimately it is the choice of consumers how and when these items are going to be re-presented to the public as reseller items. This application aims to objectify the link between 'profit or losses' in perfect competition, for products and price elasticity as demand for the firm's products which are more price-elastic, due to the availability of substitutes.</p>
+
+<span id="Stock"><h3><a name="Stock">Procuring stock</a></h3></span>
+
+<blockquote>'..comprehensive management information will be collected every month under the new framework, to ensure greater transparency regarding what services the Government is procuring and to help identify future savings opportunities..'</blockquote>
+
+<p>The profit-maximizing rule is important for economists in analysing how firms behave. Applying the cost-benefit principle, firms weigh up the costs and benefits to them of deciding whether to produce. Firms do not actually calculate their marginal cost and revenue curves, the idea allows economists to predict how firms behave when different market structures exist.</p>
+
+<p>Such potential benefits mean competition authorities do not automatically assume a monopoly is harmful, instead they look at each case on its own merits, weigh up the costs and benefits, and decide whether or not they wish to act to stop a monopoly being created or to undo an existing one. The cost-benefit principle plays a major role in deciding these factors, especially in times of deminishing trade for smaller independents and dominance of market sectors by larger consortiums.</p>
+
+<blockquote>'..Similarly, monopolies protected by the law of patents (the sole right to produce a good) give firms an incentive to develop new products that will earn economic profit. Although, where the law allows this, the monopoly is not permanent. It normally lasts only for a fixed period. In the European Union this period is 20 years, which reflects economic thinking that a monopoly might be justified for a period, although in the longer run the inefficiency caused outweighs the benefits of the monopolists innovation..'</blockquote>
+
+<p>The notion of contestable markets, and single firms in the digital domain are now dominated by sole ventures; although most choose to remain dormant - adjudicating their own reseller prices, other prefer do / adhere to research of the trading public. Although it is near on impossible to be successful in trading, without working as part of a group - buying, exchanging and selling stock to off-weighing losses.</p>
+
+<blockquote>'..Information is perfect, and there are no sunk costs. The latter costs refer to capital that can only be used in one industry. Given these circumstances, if the firm increased its prices to earn economic profit, new firms would enter the industry and undercut the existing firm. Profits become losses and either the original firm or the new entrants leave the industry..'</blockquote>
+
+<span id="Description"><h3><a name="Description">Description</a></h3></span>
+
+<p>The proposal is to adopt an Agile project framework, which analyses essential components including; concept, planning, prototyping and development around product and sector.</p>
+
+<p>Each applying:</p>
+
+ <p>skills and application of concrete experiences</p>
+ <p>distinguished terms:</p>
+ <p>competition on price, speed, quality and correlation using purchase, trade histories, income, requirement - in particular, how product / service is to be molded and delivered by you to others, by others to you or improved upon by the supplier.</p>
+
+<span class="blockquoteTop">
+<ol>
+<li>[BL]aptitude as to what economic and statistical information to source*[/BL]</li>
+    <li>[BL]trend data[/BL]</li>
+    <li>[BL]supply turnaround, observing fiscal trends[/BL]</li>
+<li>[BL]emerging micro / macro markets[/BL]</li>
+</ol>
+</span>
+
+<p>Stock characteristics, reading of price distortions their histories plus depiction of realistic expiration cycles - an indicator of macro and micro markets, peer structures and risk.</p>
+
+<h3>Interpretation</h3>
+<p>Grid data and its interpretation</p>
+
+<p>Form; using grid's and table's as a sampler for tabular data, enabling information to be interpreted*, systematically correlated and changed.</p>
+
+<p><span id="markets"><h3><a name="ChangeSector">Change Sector</a></h3></p>
+
+<dl class="toggle">
+<dt>
+<blockquote><q>..Analysing audience and goal, especially helpful in creation of a business roadmap. The objective might be to raise capital, therefore asking yourself what readers, investors demand to know; your overall plan should answer those questions in part..</q></blockquote>
+</dt>
+
+<dd>
+<div>
+<strike><blockquote><q>..Income above that needed to keep a factor of production in its current use is called rent, which might seem confusing, given rent also refers to the return landowners receive. This usage among economists, introduced by <em>David Ricardo (1772 - 1823)</em>, occurs because early economists thought the rent received by landowners with the best land was all a surplus the landowners did not require. Rent simply resulted from increased demand for land as the economy developed and landowners did not need it. This surplus was thought to apply only to land. Although later economists realized that the same could be said for other factors in limited supply, such as certain types of labour. The term rent was therefore applied to the surplus earnings of all factors. Economic rent raises the possiblity that a government could tax a factor's economic rent without it affecting the factor's supply - this could be applied to other factors of production / earnings based on the context within which those earnings are received / subsidised..<q></blockquote></strike>
+</div>
+</dd></dl>
+
+<p>Economic rent and transfer earnings, in how the divide factors rewards into two components. The first is the reward a factor requires to remain in a given form of employment or transfer earnings - therefore retention of employees or traders based on potential earnings in her next best alternative employment.</p>
+
+<p><span class="abstract">* Cementing potential earnings before switch is made to other trades..compensating for loss of trade or re-allocation of funds based on economic rent</span></p>
+
+<p>A firm's economic profit is also economic rent for the factor enterprise. The firm does not need it to remain in the industry. For that, it just requires normal profit, which is its transfer earnings. The objective is to change supply, as not to dictate the wage a worker requires to receive, to supply his or her labour in periods of market downturn.</p>
+
+<blockquote>'..In each worker's transfer earnings. Although as all workers receive the equalibrium wage the difference between that wage and what they would be prepared to work for is economic rent. The only worker who receives no economic rent is the last, or marginal, worker who comes into the market attracted by the equalibrium wage. Most workers therefore receive some economic rent..'</blockquote>
+
+<span id="costing"><h3><a name="MarketEconomy">Market Economy</a></h3></span>
+
+<p>In oligopoly, for example, if a firm cuts its prices and the other firms react by doing the same, the price change is unlikely to affect the firm's demand and will only reduce profits. Although if the other firms do not cut their prices, the firm could make higher profits. Uncertainty about how competitors will react makes it hard to predict the effect a firm's decisions will have.</p>
+
+<blockquote>'..the outcome with a Nash equilibrium corresponds to firms' behaviour in real oligopolies. Prices tend to remain constant over time. Price wars between firms occur rarely and are hard for economists to predict and difficult to explain. In short, economists essentially describe an oligopoly's behaviour in real markets..'</blockquote>
+
+<p>Analysis using game theory usually leads to the conclusion that firms in oligopoly will all charge the same price and keep that price stable. Provided all make normal profits (or better), firms have no incentive to change price and output as the risks of doing this are great. A lower price might spark a 'price war' that leaves everybody worse off. The firms are in a Nash equilibrium where every firm is doing the best it can, given the pricing and output strategies of the other.</p>
+
+<span id="claims"><h3><a name="Claims">Claims</a></h3></span>
+<blockquote>'..Turn-of-mouth return patterns are constantly subject to change because they depend on highly variable market microstructure..as consumers obtain more of a good they obtain less utility from each extra unit of the good. The effect is the law of diminishing marginal utility, which states that for each extra, or marginal unit consumed of a good - gives utility that diminishes or falls compared with the previous unit. Consumers total utility is still increasing, as each marginal unit gives the consumer extra utility, at a slower pace with each extra unit. This pattern of diminishing marginal utility only applies over a fixed period of time. On another day or week, the consumer could once again experience the higher marginal utility..'</blockquote>
+
+<p>Merit goods, should instead be grouped based on the relevance to choice of product, noting that 'Merit goods' are those for which consumer demand does not fully reflect consumer benefits. These goods are usually under-supplied because their benefits are not fully realized, therefore demand is considered ineffective.</p>
+
+<p>Part of this proposal is that by inviting the reseller market and its participants to provide education and legacy support resellers, this may help to stave off introduction of 'demerit goods' and their over consumption, which is said to be bad for the sector. It is suggested that by quantifying demand based on endorsement / success of reseller support programmes, it sets out to eradicate the under-supply of product releases whilst in a bid to regulate consumerism.</p>
+
+<p>Although the objective is not just to examine markets for substitute or complement items, it is to source justification for guiding consumerists in their buyer choice.</p>
+
+<blockquote>'..some economists have a problem with the idea of merit and demerit goods. It suggests that consumers do not know what is good for them. Economic market theory assumes that consumers do know this and are rational in wanting to maximize the utility they obtain from consuming goods. Suggesting that consumers do not know what is best for them undermines this principle..'</blockquote>
+
+<p> The option to bid is subject to buying choices of consumers, either individuals in their objective to obtain in that instance - or histories of selected items, their data following previous buyer auction or bid.</p>
+
+<blockquote>'..barter, although said to be far less efficient, protects those wishing to exchange goods from losses caused by inflation..'</blockquote>
+
+<p>The process of making purchase could be further objectified, accessorising on components which created inflation, therefore seeking to capitalise on assets which remain in demand and cashing in liabilities, either for personal consumption or reseller stock - suggestion is this should be an iterative process.</p>
+
+<blockquote>'..It is said to be difficult to decide what merits - merit goods. The danger is that any good can be described as a merit good..a case could be made that merit goods remain an under supplied, re-orderable subsidie guided by market demand..'</blockquote>
+
+<p>Regulation, should be used to avoid over provision through adverse selection for/from key sectors which underpin or are part of the infrastructure - education, work, healthcare and entertainment. Asymmetric Information, market failure and the cost of correcting asymmetric information, is said to arise if either consumers or producers have unequal knowledge of their sector.</p>
+
+<dl class="toggle">
+<dt>
+<p><span class="abstract">cite:<em>Offering histories, serving as actionable components</em></span></p>
+</dt>
+
+<dd>
+<div>
+<strike><blockquote><q>..the market will fail as information is no longer perfect and those with extra information can exploit their advantage, this should present no problem if the wishes of the consumer are actively / accurately reflected by the producer - moreover how preferences of the shopper could better be turned into actionable returns for either reseller products or new brands..</q></blockquote></strike></div></dd></dl>
+
+<span id="liveData"><h3><a name="LIveData">Live data</a></h3></span>
+
+<blockquote>'..under existing circumstances, consumers do not have the information to make choices that reflect their own utility while producers exploit the asymmetry of information..' - no longer do consumers make choices that reflect their own preferences instead, producers determine demand..'</blockquote>
+
+<p><span class="abstract">cite: price adjudication, demand for goods following rise in price - first to market and reseller markets..</span></p>
+
+<p>The initial idea focuses on change marketing, guiding the market on the acquisition of products. Informing them as to when is a good time to sell, bid or swap goods* - their market worth and the receptiveness of stockists, auditors and distributors with the objective of presenting information in the interest of the buying public.</p>
+
+<span id="priceStability"><h3><a name="PriceStability">Price Stablility</a></h3></span>
+
+<blockquote><q>..price stability occurs when average prices in the economy remain constant. The average price level is measured using an index based on the prices of goods consumed. Each good's price is given a starting value for the index of 100 at a certain date. As prices change, the index number changes with them. For example, if prices rise by 10% the index rises from its starting point of 100 to 110. The index number of each good is combined in a weighted average that depends on how important each good is in total spending. The resulting average index is the measured average price level for the economy. The percentage rate at which it changes is the inflation rate..</q></blockquote>
+
+<p>Two common price indices in the UK are the Consumer Price Index <em>(CPI)</em> and the Retail Price Index <em>(RPI)</em>. Both measure inflation, although the CPI is quoted more nowadays because it is consistent with inflation measures used in other European countries.</p>
+
+<p>This makes it useful for comparing inflation rates between countries.</p>
+
+<span id="pathways"><h3><a name="Pathways">Pathways</a></h3></span>
+
+<p>Proposing an index number for the reduction in value of reseller goods..giving an indication of how fast consumer goods depreciate therefore alleviating requirement for stockpiling. In particular examining information and its use as a tradeable commodity in the exchange, advancement and building of business links.</p>
+
+<p>Rising interest rates make borrowing money more expensive and the demand for loans falls; falling rates causes the demand for loans to rise as borrowing becomes cheaper. Citing, it is the standard demand relationship applied to loans.</p>
+
+<p>Although, two questions arise;</p>
+<span class="blockquoteTop">
+<ol>
+<li>[BL]How does the central bank change interest rates?[/BL]</li>
+<li>[BL]Why does it not simply to tell the banks restrictions their <br />
+lending are to be imposed, based on success factors of project / product sale?[/BL]</li>
+</ol>
+</span>
+
+<p>Economists define liquidity of an asset by whether it can be turned into money with certainty, without delay, and at no cost. If all three apply, the asset is liquid. If not, the asset is illiquid - citing the index number on price reduction of reseller items from same brand goods in both home and foreign markets.</p>
+
+<blockquote><q>..liquidity means that defining money becomes difficult. If money is an asset that is liquid, an asset that is not directly acceptable for settling a debt although could be easily changed into money, becomes as good as money. For instance, if the liquidity of, say, a current account in a bank, which is money, differs little from a savings account in a building society, we could perphaps define both as money..</q></blockquote>
+
+<p>In part, suggesting this could some how help stave off interest rates on borrowing or inflation, either meeting demand for buy-in of new goods or covering debts on loss of sale for reseller items. Noting, inflation causes money to lose value. Those holding money (cash, bank accounts, or other financial assets including savings) will be worse off. Money's function as a store of value is undermined. Those with debts, though, gain. The real value of their debt falls.</p>
+
+<h3>Selling Point</h3>
+
+<p>Additional consideration, as to how the reseller item were used and their potential trade commodity. Accounting for firms total costs are also the costs of different factors of production - land labour, capital and enterprise. The rewards each of these receives, rent, wages, interest and profit respectively, are for the firm, the cost of producing or encouraging the production of goods. In short, the utilisation of same brand reseller items must be equated as part of the bid to sell.</p>
+
+<p>..this should cover three key sectors;</p>
+
+<span class="blockquoteTop">
+<ol>
+<li>[BL]primary[/BL]</li>
+<li>[BL]secondary[/BL]</li>
+<li>[BL]tertiary[/BL]</li>
+</ol>
+</span>
+
+<p>equally justifying time and effort of campaigns within any one of all three at any time.</p>
+
+<p><span id="RefPnt">citing;</span></<p>
+
+<p>The primary sector contains agriculture and extractive industries such as mining for ores and minerals. The secondary sector comprises manufacturing industries that produce consumer goods and capital goods, such as machinery, for other businesses. The tertiary sector consists of service industries. These include retailing, banking, insurance, education, and personal services such as hairdressing.</p>
+
+<p>The economies of poorer countries tend to be dominated by the primary sector. As the economy grows, the secondary sector becomes more important, and then the tertiary. In rich economies, such as the US and those of Europe, the tertiary sector is generally the largest.</p>
+
+<p><span id="RefPnt">cite:</span> what determines cost's and revenues?</p>
+
+<span id="CostRevenue"><h3><a name="CostRevenue">Cost & Revenue</a></h3></span>
+
+<p>..a cost that looks unusual to the non-economist is the profit paid to the factor enterprise or the entrepreneur. After all, we defined profits earlier as the amount left over once costs of production were paid out of revenue.</p>
+
+<p>..although economists include in production costs an element that goes to the entrepreneur. This is called normal profit and is necessary to keep an entrepreneur in the industry in which he or she is working. This might be either a percentage cut from average and marginal revenue for the goods sold. The gap in production between each good, and marked difference in price owed to governing factors at the time, may help reduce the average and marginal cost of production even further..</p>
+
+<span id="MaximizingProfit"><h3><a name="MaximizingProfits">Maximizing profits</a></h3></span>
+
+<p>Firms maximize profits at the output where marginal revenue equals marginal cost; marginal revenue - revenue from last or extra unit sold of good.</p>
+
+<p>If revenue from selling an extra car exceeds the cost of producing it, the firm's profits rise. In making its decision, the firm only considers variable costs, which is the marginal cost. In the short run it cannot alter fixed costs; these must be paid. Similarly, the firm only considers the extra or marginal revenue it receives from selling the car - not the justification for making it.*</p>
+
+<p>Once marginal cost exceeds marginal revenue the firm stops selling cars. If it did not, profits would fall. To maximize profits, therefore, the firm produces where marginal cost equals marginal revenue. The firm makes a profit on the final unit of output where marginal cost equals marginal revenue, as marginal cost includes normal profit.</p>
+
+<p>- strategising re-sale, in order to maximize on profits. If manufacturers where to adopt this form of production for new goods, continuation of stock lines may be subject to undercutting by resellers who have chosen to stockpile items until conditions dictated demand and viable re-sales where able to be made.</p>
+
+<p>
+<span class="abstract">cite:</span> <span class="abstract">dis-continuation, modification, stockpiling and resale..ways in which marginal cost is decreased in order to meet marginal revenue.</span></p>
+
+<p>The profit-maximizing rule is important for economists in analysing how firms behave. Applying the cost-benefit principle, firms weigh up the costs and benefits to them of deciding whether to produce. Firms do not actually calculate their marginal cost and revenue curves, the idea allows economists to predict how firms behave when different market structures exist.</p>
+
+<p><span class="abstract">cite:</span> <span class="abstract"><em>'perfect market concept'</em>, enabling economists to predict reasonably well upon which foundations firms are likely to behave when different market structures exist and suggest policy ideas or changes based on fair competition. The case against monopoly is that it does not deliver the most efficient output. Policymakers have accepted this economic analysis and created laws and structures called competition policy that limit firms from becoming and remaining monopolists. In the UK, THE Competition Commission enforces legislation and is legally obliged to encourage competition and to discourage practices that restrict competition and lead to monopoly. Similar arrangements for competition exist in the European Union, which also affects UK firms. In the United States, anti-trust policy, as competition policy is known there, has the same goal of controlling monopolies.</span></p>
+
+<p>The suggestion is that, through negotiation it is in part left up to the buyer / sellers to equate factors of success against own efforts.</p>
+
+<span id="ResellerEconomies"><h3><a name="SellingEconomies">Selling Economies</a></h3></span>
+
+<p>..fixed money incomes, negotiation of inflation-matching wage increases and maintaining real incomes plus inflation and its affect on the redistribution of income and wealth, whether monopolising in periods of rising inflation which cause money to lose value, is a determiner in this instance on the undermining of money's function as a store of value. Those with debts, may stand to gain as the real value of their debt falls, encouraging affiliate resellers to take on more trade or take cuts on the value of goods to make sales through dwindling periods.</p>
+
+<span id="MoniesValue"><h3>Money's Value</h3></span>
+
+<p>
+
+<span class="abstract">cite:</span> <span class="abstract">The implementation of cash and bank deposits or <em>'fungible deposits'</em> which could either be fed into a form of 'fractional reserve banking' or used to give greater ability; as third parties seek to make loans and interest rates or impose quantitative controls. When operating normally, banks are intermediaries between borrowers and lenders. They take money from lenders and pass it on to borrowers, this could be financed by the producers of the product. As the process advocates the exclusion of bank's, in their role as intermediary - a process known as 'disintermediation'.</span></p>
+
+<p>In this sense, more emphasis is on making use of reserves - whilst in agreement that returns are to be made for endorsement of reseller brands. Using a sort of 'credit multiplier' systems, where lending is made by the proportion of deposits cashed on any day. Making the argument that ultimately debt must be repaid, stating that the marginal decline in product value is a reduction on income in the circular flow - although the devaluation of selected items may increase income in the short term, dependent on how the buyer and seller market is played. Whether the rule surrounding spend, investment and supply are subject to change, based on the form in which savings are added - eg. cheque, debit or cash payment, moreover the advantage this might serve for the way in which services are delivered during this period.</p>
+
+<p><span class="abstract">*cite:</span>&nbsp;<span class="abstract">inflation-matching wage increases, plus the maintainance of real incomes - inflation and its affect on the redistribution of income and wealth..monopolisation in periods of rising inflation causing money to lose value plus 'disintermediation' between lenders and borrowers.</span></p>
+
+<p>Although, essentially the objectives remain the same - searching for the 'liquidity' of an asset, whether it can be turned into money with certainty, without delay, and at no cost. Part of the overall objective is to release value of items, based on the company or industry moves made plus attainment of support contracts for legacy product ranges - boosted by strategies to compliment their place in a buyers market - not least demand for advisories from consumers.</p>
+
+<p>Ideally these advisories should set out to answer questions of pricing, practice and implementation which is at the root of current currency value on imported reseller items, against the value of popular goods of other countries with better economies - offering insight as to market trends.</p>
+
+<p>
+<span class="abstract"><sup>*</sup>reference:</span> <span class="abstract"><em>'fungible deposits'</em>, reseller or loan agreements made from stockists and suppliers of products..the call for better 'dis-intermediation' based on pre-order from producers.</span>
+</p>
+
+<p>
+<span class="abstract"><sup>*</sup>cite: the work of portals such as 'mashable', 'cnet' etc. apart from the presence of established reseller efforts</span>
+</p>
+
+<blockquote><q>..Sourcing competition in deregulated markets is key to the continued success of producers. Whether this information is re-factored as market research, the benefits which these markets bring in the form of new products, increased efficiency etc. may still be regarded. Self -interests of organisations and capacity of protecting own shareholders and equity in firms - critical functions which defines how that sector works. Discovering 'market failures' and factors upon which it is based, as a marketable commodity on life after sale..</q></blockquote>
+
+<br />
+
+<span class="blockquoteTop">credit multiplier</span>
+
+<p>Bank lending is limited by the proportion of deposits that customers want to cash on any day. If the bank think customers only want 10%, for every £1 of cash deposited, the bank could make £9 of loans. The bank's total assets would be £10 (£1 cash + £9 loans) as would its liabilities (the deposits). The bank would have enough cash to meet their customers' requirements.</p>
+
+<p>Rising interest rates make borrowing money more expensive and the demand for loans falls; falling rates causes the demand for loans to rise as borrowing becomes cheaper. Reference; it is the standard demand relationship applied to loans.</p>
+
+<p>Two questions arise.</p>
+
+<span class="blockquoteTop">
+
+<ol>
+<li>[BL]How does the central bank change interest rate?[/BL]</li>
+<li>[BL]And why does it not simply tell the banks to restrict their lending?[/BL]</li>
+</ol>
+
+</span>
+
+</p>
+
+<span class="blockquoteTop">^ bookmark edit - 02.12.15</span><br />
+
+<dl class="toggle">
+<dt>
+<blockquote><q>..if money loses any of these qualities it becomes undesirable and anybody holding it will want to dispose of it as quickly as possible. This is Gresham's Law that 'bad money drives out good', a law often observed when a person receives a foreign coin in their change. Economists define liquidity of an asset by whether it can be turned into money with certainty, without delay, and at no cost. If all three apply, the asset is liquid. If not, the asset is illiquid..</q></blockquote>
+</dt>
+
+<dd>
+<div>
+<strike><blockquote><q>..Monopolising in periods of rising inflation which cause money to loose its value as a store therefore undermining its value. Those with debts, may stand to gain as the real value of their debt falls, encouraging affiliate resellers to take on more trade or take cuts on the value of reseller goods in periods of decline..</q></blockquote></strike></div></dd></dl>
+
+<p>It is suggested that the offsetting of costs for ordering in of new product lines, could be paid by manufacturers. On the basis that, they may fast become redundant, occupying storage space which would otherwise be utilised by other sellers. Proposing that lines be taken on loan from the manufacturer and distributer, based upon the success or failure of the sale strategy put in place, passing a higher percentage of profits back to the high street store, less any deductions for the storage and upkeep of product lines. Wherein, the advantage to the producer or manufacturer could be found in legacy support, warranty and repair.</p>
+
+<blockquote><q>..Liquidity means that defining money becomes difficult. If money is an asset that is liquid, an asset that is not directly acceptable for settling a debt although could be easily changed into money, becomes as good as money. For instance, if the liquidity of, say, a current account in a bank, which is money, differs little from a savings account in a building society, we could define both as money..</q></blockquote>
+
+<p>
+<span class="abstract">cite:</span> <span class="abstract"><em>'Liquidity'</em> and waging the success of sales against securities of outlets and its staff.</span>
+</p>
+
+<p>The argument for guiding consumer retail, order and outlet..</p>
+
+<p>Inflation causes money to lose value. Those holding money (cash, bank accounts, or other financial assets including savings) will be worse off. Money's function as a store of value is undermined. Those with debts, though, gain as the real value of their debt falls. <strong>*</strong></p>
+
+<p><span class="abstract">cite:</span> <span class="abstract">ebays' presence as an outlet on the high street etc.</span></p>
+
+<p><span class="abstract">reference;</span> <span class="abstract">..buying / selling of debt, fixed money incomes, negotiation of inflation-matching wage increases and maintaining real incomes plus inflation and its affect on the redistribution of income and wealth. Liquidity of assets, and the guarantee it is able to be turned into money with certainty, at no cost..</span></p>
+
+<span id="Investments"><h3><a name="Investments">Investments</a></h3></span>
+
+<p>Buy-in, and the impact of 'higher purchase' strategies on the sale of product lines</p>
+
+<p>Inflation's effect on the value of financial assets does not necessarily mean, though, that savings fall when inflation rises. The uncertainty that inflation brings can cause households to save more if they fear for the future and wish to maintain the real value of their savings. Households might defer consumption if they think price rises by individual firms are not inflationary but profiteering. It takes them time to discover that all firms have increased their prices. In the meantime, savings rise. These effects were evident in the UK economy in 1975. Inflation was 25% and interest rates were 15% although savings still rose.</p>
+
+<p><span id="refPnt">cite:</span> Strategy, for selling in bulk. Marked value of savings, debt as a deduction on the cost of assets (financial and other) - the potential ask of the expenditure under which it was incurred.</p>
+
+<span id="MoniesValue"><h3><a name="NaturalMonopoly">Natural monopoly</a></h3></span>
+
+<blockquote><q>..A special case of monopoly is natural monopoly in which the marginal cost of production is always falling. This occurs in utility industries such as gas, electricity and water that require large investments into their infrastructure - piping, cables etc. In order to supply the product to consumers. The fixed cost involved in setting up the industry are high - although once the network is in place, the marginal cost of supplying the product becomes progressively lower..market structure which can differ from economist's ideal of perfect competition. Markets with monopolistic competition, oligopoly, or monopoly generate outputs below that in perfect competition. As output in a perfect market is Pareto-efficient, imperfect competition is likely to lead to market failure. It is possible firms will produce the perfectly competitive output, only if they are not profit-maximizers..</q></blockquote>
+
+<p>A duel advantage of predicting trends is being able to cut the marginal cost of putting together end-to-end industries*, which give valuable indicators as to demand, supply and future requirements on production - this in turn could prove valuable in the acquisition of used or second-hand goods from same brand product categories.</p>
+
+<p><span id="PrivateGoods"><h3><a name="Provision">Provision</a></h3></span></p>
+
+<p>income inequality, a case for governed intervention;</p>
+
+<p>Sourcing competition in deregulated markets is key to the continued success of producers. Whether this information is re-factored as market research, the benefits which these markets bring in the form of new products, increased efficiency etc. may still be regarded. Self interests of organisations and their capacity to protect the interests of own shareholders and equity in firms is a critical function which defines how that sector works. Discovering 'market failures' and factors upon which it is based, is a marketable dossier on life after sale.</p>
+
+<p>As it stands now, the government sets the framework and ensures a good is free to users, even though the provider is a private sector firm. They do this because a private firm, with profits in mind, has an incentive to be efficient. In contrast, a public provider with no profit motive can suffer from X-inefficiency - a major component of this application is to adjudicate the efficiency of reseller firms.</p>
+
+<blockquote><q>..public provision does not mean, however, that it has to be produced by the public sector. The use of tax revenue to pay privately for production of goods is normally a provision saved for use by government departments. They use tax revenue to pay private producers to produce the goods, the suggestion here is that they also pay provision to resellers. Macroeconomic ideas have caused economists to emphasize the government's role in ensuring an economy's stability. This view matches the focus, which pointed to how a government can involve itself in individual markets to improve how they operate..</q></blockquote>
+
+<p>Reaching a state of equilibrium, where the flow of trade remains at a particular income and the rate of expenditure is at the point when supply equals demand and there exists additional trade off's from the old economy, are major conditions which are to be regulated through independent consortiums / cooperatives who advocate progressive change in the reseller market.</p>
+
+<blockquote><q>..the adverse effects of savings can be offset as spending enters a circular flow elsewhere. In the simple economy, this happens when firms devote some of their spending to the goods of other firms and not the factor services of sectors - usually the case with the buying in of capital..</q></blockquote>
+
+<p>- Therefore predicting the circular flow, which is fuelled by interest from other sectors, not necessarily directly relevant nor connected. What remains at a particular income or level of purchasing power, could then be invested back into their primary interest to cover losses - ideally these should equate to less than average in terms of investments external to their primary industries.</p>
+
+<span class="blockquoteTop">^ 22.12.15 / 25.12.2015* - public provision production of private goods</span>
+
+<blockquote><q>..displaying the fingerprint of a potentially healthy market is said to have a certain level of predictability with regard to the timing of major changes in price, this information is able to be utilised by option traders to structure their position in the market with the objective of turning a profit from volatility swings..</q></blockquote>
+
+<p>The cost of establishing the network which otherwise may be a barrier to entry for individuals new to the profession, could be eliminated through use of modular trade strategies; covered in 'Money's Function as a Store of Value'. Gaining this sort of market advantage may allow traders to eliminate high costs, they would otherwise find difficult to recoup - impacting on their ability to compete on price with existing firms.</p>
+
+<p>The problems for new entrants mean the monopoly is likely to persist, unless introductory agreement is stuck to and built upon - offering partisan agreement which is core in supply to customers, encompassing all aspects of manufacture, transport and distribution - weighing up differences in administration costs, making competition valuable.</p>
+
+<span class="blockquoteTop">&#94;29.11.15 / 22.12.15 / 25.12.2015*</span>
+
+<p><span id="refPnt"><h3><a name="Justification">Justification</a></h3></span></p>
+
+<blockquote><q>..the economy maintains a constant income and is in equilibrium when savings (the withdrawal) equal investment (the injection). The downward effect savings can have on income is offset by the injection of extra income into the circular flow when firms invest. This economy can remain in equilibrium as long as savings and investment remain unchanged..</q></blockquote>
+
+<p>Unlike income, wealth is rarely measured. The practical difficulties of measuring the value of every asset in an economy at a given date are immense, and the attempt to - would not be accounting for the fact knowledge / value is subject to change the very next day.</p>
+
+<span class="blockquoteTop">&#94;30.11.15 / 25.12.2015* Trade and accumulative wealth</span>
+
+<p><span id="FuelFactors">- Fueling the argument and Driving factors</span></p>
+
+<p>This is depreciation. The cost of depreciation should, in theory, be deducted from the value of output produced to reflect the lost value of capital. If this happened, Net, and not Gross, Domestic Product would be obtained. In practice, calculating depreciation is difficult and likely to be inaccurate. Economists prefer to rely on GDP as the measure of national income even though, strictly speaking, they should use Net Domestic Product.</p>
+
+<blockquote><q>..how to make a dual / multi-faceted structure representative of the economy..</q></blockquote>
+
+<p>It is proposed that this cooperative and its campaign for change, should examine the factors which could be attributed to lost capital - therefore seek to instruct markets in their strategy with backing from manufacturers, distributers alike - questioning decision rules, adjusting unit price quotes at the line item level, calculating floor - a ceiling on particular items within a high - encouraging and strengthening the selling power of goods. In the opening stages, the application protocol is just a component of a system of bids, the aim is they remain subject to change dictated by the economic sponsors; an ideal which better endorses market volatility and consumer trends.</p>
+
+<span class="blockquoteTop">&#94;Abstract from patent document [0056] 'us2002046148(A1)-2002-04-18'</span>
+
+<p>Quiet times, building and displaying the fingerprint of a potentially healthy sector..</p>
+
+<blockquote><q>..Captializing on Rare Events..in particular activity quantifying markets, especially uncertainty in tracking the difference between actual and implied volatility; deemed to be strong enough in order to prompt introduction of products that allow investors to buy and sell realized volatility over a set timeframe. The intention is to track arbitrage trading strategies, betting on hypothetical evaluations and differences between the two - encouraging the introduction of indicators highlighted participants; dynamics which aim to show the match between product, resale and consumption - calculated to a window of time (delta)..</q></blockquote>
+
+<p>Due to the nature of derivatives, they are said to cover many types of products - their arcane markets always subject to change</p>
+
+<p>The division between long and short-term traders, is constantly subject to review using data as a guide for 'in-the-money' trade - delivering data on profit for 'short-term' investors and the price they pay for their presence in the market.</p>
+
+<span class="blockquoteTop"><em>&#94;Abstract: *if this is higher for long term investors and why it should be the reverse</em></span>
+
+<p><span id="TradeAlt"><h3><a name="TradeAlternates">Trade alternates</a></h3></span></p>
+
+<p>Economists use elasticity to identify how much demand responds to changes in any of the factors that explain demand. Large changes are elastic. Demand changes readily. Small changes are inelastic just as steel wires respond little when pulled. Factors of elasticity, identified include how much demand responds to change in any of the factors. As price and quantity demanded are both elements in the PED formula, a firm can establish how changing the price of its good affects revenue if it knows the PED of its goods.</p>
+
+<p>For example, when demand is price-inelastic, increasing price cuts demand, but the fall is less in percentage terms than the price rise. Mathematically, revenue must rise. If demand is elastic, though, and the firm increases price, the percentage fall in quantity demanded is greater and revenue falls.</p>
+
+<p>Revenue, however is not profit, what remains after cost of production is subtracted. If price falls when demand is elastic, revenue increases. Although costs rise too as the firm must produce more to meet higher demand. Profits only rise if the increased revenue exceeds the increased costs. Many firms cutting prices have seen profits fall when costs increased more than revenue.</p>
+
+<p>Where no ambiguity exists, though, is if demand is inelastic. Increasing price must cause profits to rise. Revenue increases, as we have seen, but as demand falls, the firm produces fewer goods and so costs must fall. Rising revenue and falling costs lead to only one conclusion: profits rise.</p>
+
+<p>Sourcing ways to pay, accounting for;</p>
+
+<span class="blockquoteTop"> 
+<ol>
+<li>[BL]re-introduction of electronic currency[/BL]</li>
+<li>[BL]higher purchase agreements from outlet[/BL]</li>
+<li>[BL]e-commerce presence and distribution deals[/BL]</li>
+<li>[BL]Requirements led scrutiny of stockists[/BL]</li>
+</ol>
+</span>
+
+<blockquote><q>..savings in times of high expectations, as a reseller is comparative to..how markets determine a factor of production's income. The supply factors of production from households and demand from firms solves the problem of how the goods produced in an economy are distributed. Although the demand for labour depends on its marginal revenue product, which depends on the price at which the firm can sell the goods the labour produces. The good's price is determined by market supply and demand. Although demand in the market depends partly upon consumer incomes or wages..this is said to be the problem..</q></blockquote>
+
+<p>If the price value of materials, labour and production could be tracked from start to finalisation - this may give a better impression as to the deprecated value on resale - admissible are the factors within that cluster for that window of time (trend).</p>
+
+<p><span class="refPnt"><h3><a name="ShortWorking">Short working:</a></h3></p>
+
+<p>As with income elasticity, the sign for cross-elasticity matters. A positive sign means good Y's higher price has caused demand for good X to increase. This implies the two goods at this stage are either substitutes or compliments. If the sign is negative, and demand for X fell, when the price of Y rose, the goods must be compliments. And if the demand for X does not change, the two goods are independent of each other.</p>
+
+<p>Although highlighting one of many advantages resellers may gain in a market, dependent on their sources..</p>
+
+<p><span class="abstract">cite:</span> <span class="abstract">product release and factors of depreciation</span></p>
+
+<p>Demand might also be more elastic in the long run than in the short run. If, for example, petrol prices increase, consumers will, in the short run, continue to buy petrol as they need it for their car. To keep the car running, the consumer must pay the higher price. In time consumers can find alternatives to buying a fuel-efficient car that cuts demand for petrol. PED becomes more elastic.</p>
+
+<p>For some goods, such as cigarettes, time has the opposite effect. A price rise causes a relatively large fall in quantity demanded in the short run - although in the longer run demand increases again as habit and a lack of effective substitutes become apparent to the consumer.</p>
+
+<p>Demand is elastic in the short run, although inelastic in the long run.</p>
+
+<p>Income and cross-price Elasticity of demand, measures how demand responds to other changes. Economists usually do this for income and the price of other goods. The formula for these other elasticities takes the same form as that for PED.</p>
+
+<p>Income elasticity of demand is defined as:</p>
+
+<p>Percentage change in quantity demanded / Percentage change in income</p>
+
+<p>Unlike PED, economists cannot be relaxed about whether to use a plus or minus sign. With income elasticity the sign matters and we must specify it. We normally expect the sign to be positive as demand rises when income rises and falls when income falls. For inferior goods the sign will be negative given that demand falls when income rises. The sign of the income elasticity demand for a good therefore tells us if the good is normal or inferior.</p>
+
+<p>If the value of the income elasticity of demand for a good is less than +1, demand is said to be income-elastic and the good is a <em>'necessity'</em>. Food is an example. If the value exceeds +1, demand is income-elastic and the good is a <em>'luxury'</em>. These groups are broad, however, and are guides rather than definitive statements about a good's nature.</p>
+
+<p>The response of demand for a good when the price of other goods changes, is measured by cross-price (or just cross) elasticity of demand.</p>
+
+<p>For goods X and Y, the formula is:</p>
+
+<p>Percentage change in quantity demanded of good X / Percentage change in price of good Y</p>
+
+<p>As with income elasticity, the sign for cross-elasticity matters. A positive sign means good Y's higher price has caused demand for good X to increase. This implies the two goods at this stage are either substitutes or compliments. If the sign is negative, and demand for X fell, when the price of Y rose, the goods must be compliments. And if the demand for X does not change, the two goods are independent of each other.</p>
+
+<blockquote><q>..Black-Scholes price calculations are more granular in the sense that they use a number of minutes remaining until options expiration. These calculations are specifically intended to take into account all the remaining time. The difference becomes increasingly significant as expiration approaches - the final moments of the cycle represented as a fraction of the remaining days. Forward modeling should, therefore, be based on total time remaining, calculated in minutes, as a percentage of trade time..different volatility values can be used and the results compared when determining the fair value of a product. A professional bidder might, calculate volatility using different-length windows - 20 days to represent the past month and 90 days to measure an entire quarter - in addition to summative factors based on trade window. Each result would generate a different option price when plugged into this pricing model (Black-Scholes) or another..</q></blockquote>
+
+<span id="SpotBids"><h3><a name="Description">Spot bids</a></h3></span>
+
+<p>This application should enable users to set their market place, sourcing best-fit solutions - putting to work a set of agnostic components - 'JIT' (Just in Time) compilation. For instance attaining access data which displays the best bid and ask prices or spreads and their link to 'intra-day' or 'traditional close-to-close volatility' - search for correlation between product pairs.</p>
+
+<blockquote><q>..the over complication in calculation of dimensionless numbers..taking as example, techniques used by professional traders such as ordering of correlations and nodes between the highest scoring (geometrically closet) pairs, using Euclidean distance between two items, hedging - measuring the geometric distance between tickers and recursively clustering those most closely related. Further reference 'short stock', 'long puts' on single entities and their groupings..</q></blockquote>
+
+<p>Also the use of higher dimensional models representing more than 3 events not easily visualized, plus more complex analytical tools used to measure the geometric distances between data points. Hierarchical clustering using Pearson correlation coefficients is a more reasonable approach when the goal is to compare price changes across evenly spaced sequential time frames - better still the source of finance across groups of professional resellers.</p>
+
+<span id="make"><h3><a name="TheMake">The Make</a></h3></span>
+
+<blockquote><q>..market sectors and the more popular approach of forming indicators - flawed for a variety of reasons, most significant of these are referenced as the "over-fitting" problem. Over-fitting occurs when an indicator is optimally tuned against historical data. The problem is especially severe when the data spans a limited amount of time. Almost always the case that indicators, regardless of their sophistication, will work in one time frame and not another. Markets are dynamic in the sense that they are driven by economic forces that change rapidly over time..</q></blockquote>
+
+<p>Examining the advantage of digital currency exchanges, the buy - in currency from country originally tasked as producer. The Sell, at rates of exchange to - or through reseller; based upon determiners / influencers which a personel to individual market forces.</p>
+
+<p>The factors upon which 'option bids' are based, enables the setting of variables for a window of time. Its periodic state, an opportunity to flag trends and make exchanges - convincing trading place as a whole to adhere to the margin for profit and loss is however a different story. Thresholds are to be set for the size of the first price change, the second price change, and an acceptable value for the r-squared test. The length of the sliding window used to calculate r-squared is to be experimented with - although many more combinations are yet to be tested.</p>
+
+<p>The pattern of diminishing marginal utility only applies over a fixed period of time. On another day or week, the consumer could once again experience the higher marginal utility. Part of the proposal here is to observe each consumer's utility, either through return purchase, procurement, supply and demand. In order to attempt to solve the problem of 'diminishing marginal utility', an endorsement of true product value must be made and complimented. The introduction of 'Change Market Advertising', emphasises the value, use of type products and work of creative industries in pushing this marketing message forward - the capacity in which digital advertising is to be utilised in order to revitalise appeal.</p>
+
+<span class="blockquoteTop"><em>&#94;Abstract: change marketing and advertising on option bids</em></span>
+
+<p>Income elasticity of demand is defined as:</p>
+
+<p>Percentage change in quantity demanded / Percentage change in income</p>
+
+<p>Unlike PED, economists cannot be relaxed about whether to use a plus or minus sign. With income elasticity the sign matters and we must specify it.</p>
+
+<p>We normally expect the sign to be positive as demand rises when income rises and falls when income falls. For inferior goods the sign will be negative given that demand falls when income rises. The sign of the income elasticity demand for a good therefore tells us if the good is normal or inferior.</p>
+
+<p>If the value of the income elasticity of demand for a good is less than +1, demand is said to be income-elastic and the good is a 'necessity'. Food is an example. If the value exceeds +1, demand is income-elastic and the good is a 'luxury'. These groups are broad, however, and are guides rather than definitive statements about a good's nature.</p>
+
+<p>The response of demand for a good when the price of other goods changes, is measured by cross-price (or just cross) elasticity of demand.</p>
+
+<p>For goods X and Y, the formula is:</p>
+
+<p>Percentage change in quantity demanded of good X / Percentage change in price of good Y</p>
+
+<p>As with income elasticity, the sign for cross-elasticity matters. A positive sign means good Y's higher price has caused demand for good X to increase. This implies the two goods are substitutes. If the sign is negative, and demand for X fell, when the price of Y rose, the goods must be complements. And if the demand for X does not change, the two goods are independent of each other.</p>
+
+<p>Cross-elasticity of demand formally measures the relationship between the markets for different goods. We do not speculate whether tea and coffee are substitutes or bread and butter are complements. Instead, we calculate cross elasticity of demand.<br />
+
+<span class="abstract">&dagger; cite: fluctuating cost of relative goods, defining consumer wants and pricing structures..using 'cross-elasticity' in order to determine these moves, income elasticity demand - informing us if good is normal or inferior..</span>
+
+</p>
+
+<span id="GoalsObjectives"><h3><a name="GoalsObjectives">Goals & Objectives</a></h3></span>
+
+<p>The following aims to objectify the short, medium and long-term goals of this development.</p>
+
+<span class="blockquoteTop">
+<ol>
+<li>[BL]To familarize self with products and procedures[/BL]</li>
+<li>[BL]break even, start making tangible returns[/BL]</li>
+<li>[BL]Take advantage of seller opportunities[/BL]</li>
+<li>[BL]Exchange of information and its value in the stabalisation of sector trade*[/BL]</li>
+<li>[BL]influenced by patent document [0057] <em>'us2002046148(A1)-2002-04-18'</em>[/BL]</li>
+</ol>
+</span>
+
+<p><sup>*</sup>account of historic trade<br />
+
+<dl class="toggle">
+<dt>
+<blockquote><q>In a supplier-bidding auction, bid prices start high and move downward in reverse-auction format as bidders interact to establish a closing price. The auction marketplace is one-sided, i.e. one buyer and many potential suppliers. Typically the products being purchased are components or materials. "Components" typically mean fabricated tangible pieces or parts that become part of assemblies of durable products. Components may typically include gears, bearings, appliance shelves or door handles. 'Materials' typically mean bulk quantities of raw materials further transformed into products.</q></blockquote>
+</dt>
+
+<dd>
+<div>
+<strike><blockquote><q>Industrial buyers do not typically purchase one component at a time. Rather they purchase whole families of similar components, services are seen as a requirement to be called upon only when needed. At times, components are strongly related to one another. As an example, a buyer might purchase a given plastic knob in two different colors, or might purchase a nameplate in four different languages. These parts are similar that by definition they must be purchased from the same supplier - all of the knobs made using the same mold. These items are therefore grouped to a single lot. Bidders in industrial auctions must provide unit price quotes for all line items in a lot.</q></blockquote></strike>
+</div>
+</dd></dl>
+
+<span class="blockquoteTop"><em>&#94;reference; supplier-bidding auctions - patent document [0012] [0013] 'us2002046148(A1)-2002-04-18'</em></span>
+
+<blockquote><em>{..Time Series Correlation; data mining experiments that combine price-change information with insights gleaned from textual analysis represent high level of sophistication. Many variations and combinations are possible. The most advanced examples involve capturing and analyzing news feeds in real time with the goal of executing trades rapidly enough to capitalize on the changes of a fast moving market. In addition to generate constant positive return across a large number of trades, by both chaining product demand and meeting shortfalls in re-requisitions / bulk purchases..}</em></blockquote>
+
+<p>
+<span class="abstract">cite:</span> <span class="abstract">the return in commodity that consumers receive..how it is recorded.</span>
+
+<dl class="toggle">
+<dt>
+<blockquote><em>{..the generation of unit price quotes for all line items or chained goods in their designated lots, shows the practical affects of individual, group or syndicates and their contribution to sale of goods. In a bid to reduce the probability off - or avoid online industrial auctions which offer incorrect bids which upset behavior of others, creating inequality for all suboptimal results for both buyers and suppliers..Instead suggesting that advertising play a stronger dynamic role in the generation of 'Short interest' - influencing the way that stocks react to financial news..better still customising campaigns according to their market data / analysis of individual demand..}</em></blockquote></p>
+
+<span class="blockquoteTop">&#94;Abstract from patent document [0064] 'us2002046148(A1)-2002-04-18'</span>
+
+<dd>
+<div>
+<strike><blockquote><q>..Advertisements, which are far more readily recorded. Broadcasting provides something of a laboratory instance depicting phase shifts, which simulates the conditions which produce it in face-to-face communication, and enables us to record it in adequate quantities from readily available data source..</q></blockquote></strike></p>
+</div>
+</dd></dl>
+
+<span class="blockquoteTop"><em>&#94;12.12.15</em></span>
+
+<p>Advertising, as part of this application will endorse two key aspects;</p>
+
+<span id="Materials"><h3><a name="Materials">Materials:</a></h3></span>
+
+<p>Viral advertising, strongly influenced by press advertising; which divides its categories into two parts. The familiar small-print columns of classifieds, and display advertising scattered throughout the news pages and designed to attract the reader. Much the same with 'Broadcast advertisements' which come in chunks of sound ranging from 5 to 120 seconds long. They may be gathered into 'commercial breaks', as in television or dropped singularly; in and out of sequence into the flow of radio programming.<br />
+
+These are the influences which form the foundation for the dynamics of advertising pushed to your devices, depicting activity both from and to groups.</p>
+
+<dl class="toggle">
+<dt>
+<blockquote><q>..deciding on the time period is part of defining the universe to which a sample strictly applies..Volatility calculations plus standard price deviations..There has been much debate over the length of a trading year and the number that should be used for volatility calculations - moreover the method used to convey up-to-date data across multiple channels. In normal trading terms, although a calendar year is 365 days long, there are actually only 252 trading days, to this end volatility calculations are made in much the same way as macro trades - calculations are based on daily closing prices, although the margins of what is an appropriate number may differ greatly on a smaller - more rapid scale; subject to sector demand. Use of forward modeling, based on total time remaining, calculated in units of time, as a percentage of total trade..is a strategy normally reserved for bulk sale / acquisition, which otherwise might prove difficult to implement on micro bids..</q></blockquote>
+</dt>
+
+<dd>
+<div>
+<strike><blockquote><q>..Data mining experiments that combine price-change information with insights gleaned from textual analysis represent a high level of sophistication. Many variations and combinations are possible. The most advanced examples involve capturing and analyzing news feeds in real time with the goal of executing trades rapidly enough to capitalize on the changes of a fast moving market..</q></blockquote></strike>
+
+<strike><blockquote><q>..the goal is a reasonable one because even highly efficient markets - those characterized by strong-form efficiency - have winners and losers. It is certainly possible to profit from trends that reliably persist for several minutes, and many event-driven market moves persist for several hours. The objective should be to raise the level of accuracy, not the level of sensitivity..</q></blockquote></strike><div></dd></dl>
+
+<p>Data mining approaches that generate a large number of triggers often fail when the probability of being right is just slightly greater than the probability of being wrong. A much better approach is to select stringent conditions that generate a small number of very accurate trade triggers. Many successful investors have developed systems that generate just a few triggers each year that each have very high probability of success. Option traders can capitalize on this level of accuracy by doubling or tripling their investment in a brief period of time.</p>
+
+<p>Critics of this philosophy will be quick to point out that a strategy that is right 55% of the time should generate a constant positive return across a large number of trades. Unfortunately, this approach does not fully comprehend the realities of trading. An unreliable trigger must be managed with very sensitive stop orders* that limit profit even when the trigger works. Reducing the sensitivity of stop orders allows wider price fluctuations that are beneficial when a trade is moving in the profitable direction.</p>
+
+<p>However increased tolerance to price fluctuations also causes larger losses when the market moves against a trade. Bid-ask spreads further complicate the situation. If we eliminate stop orders altogether, we are making the assumption that positive and negative moves have the same magnitude, and that our 55/45 advantage will generate a profit simply because we are right more often than wrong..it is very difficult to profit from a small statistical advantage..</p>
+
+<p>The Strengths of the product should be in knowing digital goals as a bidder; understanding the market sector your trading with or to - plus knowing exactly what you want to communicate in the ad. statement is said to be core. The purpose of this development, is to guide the bidding process.</p>
+
+<blockquote><q>..selling points, should focus on framing the right content at intersection of goal and audience. Short-form or 'one-in-four messages' say the other three forms of communication should share idea's, comments on subject..the rest is usually left to the discretion of the parties concerned, correlating its significance with the principles of business communications for short and long-form foundation materials..</q></blockquote>
+
+<p>Trade wallet, offering flexible inline / line-item rules which denote locked-in / fixed and variable portions of each sector. Furthermore be able to adjust rapidly to movements in the market beyond original expectations - offering alternates to product lines matching brand or alternate components to specification. <sup>*</sup></p>
+
+<p><em><sup>*.</sup> Substitution effect and its occurance because a goods price changes relative to that of other goods. If its price falls, the consumer buys more as it has become relatively cheaper. If price were to rise and the good becomes relatively dearer, the consumer substitutes another good. Citing also the change in good's price which affects a consumer's real income or total amount of goods that the consumer can buy. Price rise, the consumer's demand for all goods is affected - as derived income declines.</em><br />
+
+- derived income is value to market of products after 'PED'.</p>
+
+<span class="blockquoteTop">
+<p>
+Referencing;<br />
+
+<ol>
+<li>[BL]labour markets and marginal cost[/BL]</li>
+<li>[BL]structure, equilibrium in competition[/BL]</li>
+<ol>
+<li>[BL]falling average cost and marginal cost[/BL]</li>
+<li>[BL]short / long - run[/BL]</li>
+</ol>
+</ol>
+
+<ol>
+<li>[BL]Average and marginal costs[/BL]</li>
+<li>[BL]cross-elasticity of demand[/BL]</li>
+<li>[BL]diminishing marginal utility, products / services as maximized utility[/BL]</li>
+<li>[BL]economic rent and supply[/BL]</li>
+<ol>
+<li>[BL]maximizing utility on transfer profits[/BL]</li>
+<li>[BL]sales of commodities[/BL]</li>
+</ol>
+</ol>
+
+</p>
+</span>
+<span id="Documents"><h3>Drawings’ Document</h3></span>
+
+<p>UML / DSL should be based on systems and data in use by the following people;</p>
+
+<span class="blockquoteTop">
+
+<p>Who will buy?</br>
+
+<ol>
+<li>[BL]multi-stream customer base of brokers[/BL]</li>
+<li>[BL]LLCs[/BL]</li>
+<li>[BL]Manufacturers[/BL]</li>
+<li>[BL]Distributors[/BL]</li>
+<li>[BL]Auditors[/BL]</li>
+<li>[BL]Risk assessors[/BL]</li>
+<li>[BL]Underwriters[/BL]</li>
+<li>[BL]Advertisers (radio / t.v.)[/BL]</li>
+<li>[BL]Wholesalers[/BL]</li>
+<li>[BL]Independents[/BL]</li>
+<li>[BL]Stockist[/BL]</li>
+<li>[BL]Warehouses[/BL]</li>
+<li>[BL]Resellers[/BL]</li>
+<li>[BL]Traders[/BL]</li>
+</ol>
+</p>
+
+</span>
+
+<p>Why will they buy from you?</p>
+
+<p>A micro-model - an open venture, not specific to / modelled around one individual requirement..</p>
+
+<p>a micro-enterprise like many others - advocating inclusion on an individual basis in bidding for derivative stock. Offering the opportunity for ltd companies, plc or even sole traders to act on behalf of manufacturers, stockists and distributors.</p>
+
+<blockquote>'..campaign for change: Budget campaigns, metered against consumer demands and realistic goals..'</blockquote>
+
+<p>What realistic, measurable and stretching marketing goals do you think your business can `achieve on a sustainable basis?</p>
+
+<p>To re-iterate:</p>
+
+<blockquote><q>..percentage of expected sales revenue to be spent on marketing must be in proportion to trade interests and transactions. This should directly impact on the proposed marketing methods, plus the extent to which these methods are expected to reach individuals or target bases..</q></blockquote>
+
+<span class="blockquoteTop">
+<ol>
+<li>[BL]Macro / Micro markets and options trade are good indicators of this increment.[/BL]</li>
+<li>[BL]Endorse shared concern of individual or target customer types. In a digital republic, dependent on the scale of trade dictate req's within that sector.[/BL]</li>
+<li>[BL]Show how time is released, through the reduction of time spent on project campaigns.[/BL]</li>
+<li>[BL]In the loop, passing on of 'circle influences', trading customer bases as products.[/BL]</li>
+<li>[BL]How do your competitors retain customers, sharing realistic, measurable and stretching marketing goals[/BL]</li>
+<li>[BL]Budget, Pricing and policies of a digital economy: negotiation of credit agreements and the margin of credit given to suppliers and growing customer bases of suppliers.[/BL]</li>
+</ol>
+</span>
+
+<p>Keeping in mind the utilisation of an established frameworks for trade.</p>
+
+<span class="blockquoteTop">
+<ol>
+<li>[BL]Permissions[/BL]</li>
+<li>[BL]Resellers[/BL]</li>
+<li>[BL]Insurance company / broker[/BL]</li>
+<li>[BL]LLCs[/BL]</li>
+<li>[BL]Regulatory Bodies[/BL]</li>
+</ol>
+</span>
+
+<span id="Investment"><h3><a name="Investment">Investment</a></h3></span>
+
+<dl class="toggle">
+<dt>
+<blockquote><q>..an aspect of the production / reception issue is deciding whether to treat each outlet equally or to weight them by audience size. If each is represented equally, it is on the grounds that each is a separate producer of language. If outlets are weighted according to their audiences, the number of receivers is treated as the important factor in selection. Not least due to determiners which create those ratios which are able to be measured against population in the area, their receptiveness to change; is again a determiner as to investment - popularity of product, receptive uptake and active competition. <sup>[z][y]</sup>&#94 &nbsp;..</q></blockquote>
+</dt>
+
+<dd>
+<div>
+
+<strike><blockquote><q>..In sociolinguistics there is also a phenomenon known as initiative or metaphorical style. This occurs when a person adopts a style, or even a language, which is not just a response to the situation as something different. This occurs, for example, when a speaker switches from local dialect to prestigious national dialect in order to win an argument with a friend or family member..data on such switches is difficult to collect, since by definition they occur rarely and in unexpected circumstances..</q></blockquote></strike>
+</div>
+</dd>
+</dl>
+
+<p>- this application works within the confines of an existing infrastructure, allowing it to integrate with recognised frameworks adapting to markets.</p>
+
+<blockquote><q>..the requirement to influence the audience through language, within a short time-frame - is another draw of application. Enabling greater cause and substantiation for shift in initiative, simulating the conditions produced in face-to-face communication - recorded in adequate quantities from readily available data sources..dealing with tangible products and their trade..</q></blockquote>
+
+<p>- in much the same way, the production of language - composed and edited by journalists, written discourse can provide data for 'diachronic linguistics' the study of language change..more prevalent in web / multi-media..here applied to the study of changing markets.</p>
+
+<span id="Returns"><h3><a name="Returns">Returns</a></h3></span>
+
+<p>Capital put in by owners / groups is to be kept to a minimum, advertising used to boost demand on selected products is to be substantiated with guarantees on returns - polling statistical data based on live sales. This system is to help calculate 'shortfall' and required income on reduced amounts month on month; additional potential earnings are to be calculated from forecasts and spending. Initially launched as a dry-run, polling receptive response from a buyers and sellers alike; as to their uptake of product bids.</p>
+
+<div id="framecontent">
+    <div class="inner">
+        <span class="signature" align="right">©.[drm]| co* | 2016</span>
+    </div>
+</div>
+</div>
+<script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 284,                  // Integer: Speed of the transition, in milliseconds
+        label: "Menu",                    // String: Label for the navigation toggle
+        insert: "after",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+
+<script type="text/javascript">
+
+function toggleDDVisibility(e) {
+
+var el = this.nextElementSibling? this.nextElementSibling: this.nextSibling;
+
+while ( el.nodeType !== 1 ) {
+
+el = el.nextSibling;
+
+}
+
+if ( el.style.display === 'block' ) {
+
+el.style.display = 'none';
+
+} else {
+
+el.style.display = 'block';
+
+	}
+}
+
+function setupDTOnclick() {
+
+if ( document.querySelectorAll ) {
+
+var list = document.querySelectorAll('dl.toggle dt');
+
+for (var i=0, len = list.length; i<len; i++) {
+
+list[i].onclick = toggleDDVisibility;
+
+		}
+	}
+}
+
+setupDTOnclick();
+
+</script>
+</div>
+  </body>
+</html>
