@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>Detecting Duplicates in O(1) Space and O(n) Time - Jason Davies</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+rect {
+  stroke: #000;
+  fill: none;
+}
+path.link {
+  stroke: #000;
+  fill: none;
+}
+circle {
+  fill: #fff;
+  stroke: #000;
+}
+text.index {
+  font-size: 10px;
+}
+
+.highlight circle {
+  fill: #fc0;
+}
+
+.cycle-start circle {
+  fill: #f00;
+}
+</style>
+</head><body>
+
+<div id="vis"><svg height="250" width="250"><defs><marker orient="auto" markerHeight="8" markerWidth="10" markerUnits="strokeWidth" refY="5" refX="24" viewBox="0 0 10 10" id="arrow"><path d="M0,0L10,5L0,10Z"></path></marker></defs><g transform="translate(124.5,124.5)"><path d="M100,0A200,200,0,0,1,30.901699437494724,-95.10565162951536" marker-end="url(#arrow)" class="link"></path><path d="M80.90169943749474,58.778525229247315A200,200,0,0,1,-100,1.2246467991473532e-14" marker-end="url(#arrow)" class="link"></path><path d="M30.901699437494745,95.10565162951535A200,200,0,0,1,-30.901699437494734,95.10565162951536" marker-end="url(#arrow)" class="link"></path><path d="M-30.901699437494734,95.10565162951536A200,200,0,0,1,-30.901699437494756,-95.10565162951535" marker-end="url(#arrow)" class="link"></path><path d="M-80.90169943749473,58.77852522924732A200,200,0,0,1,-30.901699437494734,95.10565162951536" marker-end="url(#arrow)" class="link"></path><path d="M-100,1.2246467991473532e-14A200,200,0,0,1,-30.901699437494756,-95.10565162951535" marker-end="url(#arrow)" class="link"></path><path d="M-80.90169943749476,-58.7785252292473A200,200,0,0,1,30.901699437494724,-95.10565162951536" marker-end="url(#arrow)" class="link"></path><path d="M-30.901699437494756,-95.10565162951535A200,200,0,0,1,30.901699437494724,-95.10565162951536" marker-end="url(#arrow)" class="link"></path><path d="M30.901699437494724,-95.10565162951536A200,200,0,0,1,-30.901699437494756,-95.10565162951535" marker-end="url(#arrow)" class="link"></path><path d="M80.90169943749473,-58.778525229247336A200,200,0,0,1,30.901699437494745,95.10565162951535" marker-end="url(#arrow)" class="link"></path><g transform="translate(100,0)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">9</text><text text-anchor="middle" dy=".3em" y="0" x="20" class="index">1</text></g><g transform="translate(80.90169943749474,58.778525229247315)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">6</text><text text-anchor="middle" dy=".3em" y="11.755705045849464" x="16.18033988749895" class="index">2</text></g><g transform="translate(30.901699437494745,95.10565162951535)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">4</text><text text-anchor="middle" dy=".3em" y="19.02113032590307" x="6.180339887498949" class="index">3</text></g><g class="highlight" transform="translate(-30.901699437494734,95.10565162951536)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">8</text><text text-anchor="middle" dy=".3em" y="19.021130325903073" x="-6.180339887498947" class="index">4</text></g><g transform="translate(-80.90169943749473,58.77852522924732)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">4</text><text text-anchor="middle" dy=".3em" y="11.755705045849465" x="-16.180339887498945" class="index">5</text></g><g class="highlight" transform="translate(-100,1.2246467991473532e-14)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">8</text><text text-anchor="middle" dy=".3em" y="2.4492935982947065e-15" x="-20" class="index">6</text></g><g transform="translate(-80.90169943749476,-58.7785252292473)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">9</text><text text-anchor="middle" dy=".3em" y="-11.75570504584946" x="-16.180339887498953" class="index">7</text></g><g class="cycle-start" transform="translate(-30.901699437494756,-95.10565162951535)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">9</text><text text-anchor="middle" dy=".3em" y="-19.02113032590307" x="-6.180339887498951" class="index">8</text></g><g class="highlight" transform="translate(30.901699437494724,-95.10565162951536)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">8</text><text text-anchor="middle" dy=".3em" y="-19.021130325903073" x="6.180339887498945" class="index">9</text></g><g transform="translate(80.90169943749473,-58.778525229247336)"><circle r="10"></circle><text text-anchor="middle" dy=".3em">3</text><text text-anchor="middle" dy=".3em" y="-11.755705045849467" x="16.180339887498945" class="index">10</text></g></g></svg></div>
+<p><button id="random">Randomise</button></p>
+
+<script src="d3.js"></script>
+
+<script>
+
+var width = 250,
+    height = 250,
+    w = 20;
+
+var svg = d3.select("#vis").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("defs").append("marker")
+    .attr({
+      id: "arrow",
+      viewBox: "0 0 10 10",
+      refX: 24,
+      refY: 5,
+      markerUnits: "strokeWidth",
+      markerWidth: 10,
+      markerHeight: 8,
+      orient: "auto"
+    })
+  .append("path")
+    .attr("d", "M0,0L10,5L0,10Z");
+
+svg = svg.append("g")
+    .attr("transform", "translate(" + [width / 2 - .5, height / 2 - .5] + ")");
+
+var n = 10,
+    τ = 2 * Math.PI;
+
+random();
+
+d3.select("#random").on("click", random);
+
+function random() {
+  var a = [];
+  for (var i = 0; i < n; i++) {
+    a.push(1 + Math.random() * (n - 1) | 0);
+  }
+  var cycle = floyd(function(d) { return a[d - 1]; }, a[n - 1]),
+      duplicate = cycle.pop(),
+      start = pow(function(d) { return a[d - 1]; }, a[n - 1], cycle.pop()) - 1;
+
+  var line = svg.selectAll("path.link")
+      .data(a);
+  line.enter().append("path")
+      .attr("class", "link")
+      .attr("marker-end", "url(#arrow)");
+  line.attr("d", function(d, i) {
+        return ["M", [100 * Math.cos(τ * i / n), 100 * Math.sin(τ * i / n)],
+                "A", [200, 200, 0, 0, 1, 100 * Math.cos(τ * --d / n), 100 * Math.sin(τ * d / n)]].join("");
+      });
+
+  var g = svg.selectAll("g")
+      .data(a);
+  var gEnter = g.enter().append("g")
+      .attr("transform", function(d, i) { return "translate(" + [100 * Math.cos(τ * i / n), 100 * Math.sin(τ * i / n)] + ")"; });
+  gEnter.append("circle")
+      .attr("r", w / 2);
+  gEnter.append("text")
+      .attr("dy", ".3em")
+      .attr("text-anchor", "middle");
+  gEnter.append("text")
+      .attr("class", "index")
+      .attr("x", function(d, i) { return 20 * Math.cos(τ * i / n); })
+      .attr("y", function(d, i) { return 20 * Math.sin(τ * i / n); })
+      .attr("dy", ".3em")
+      .attr("text-anchor", "middle")
+      .text(function(d, i) { return i + 1; });
+  g
+      .classed("highlight", function(d) { return d === duplicate; })
+      .classed("cycle-start", function(d, i) { return i === start; });
+  g.select("text").text(String);
+}
+
+function floyd(f, x0) {
+  // The main phase of the algorithm, finding a repetition x_mu = x_2mu
+  // The hare moves twice as quickly as the tortoise
+  var tortoise = f(x0),
+      hare = f(f(x0));
+  while (tortoise !== hare) {
+    tortoise = f(tortoise);
+    hare = f(f(hare));
+  }
+
+  // at this point the start of the loop is equi-distant from current tortoise
+  // position and x0, so hare moving in circle and tortoise (set to x0 )
+  // moving towards circle, will intersect at the beginning of the circle.
+
+  // Find the position of the first repetition of length mu
+  // The hare and tortoise move at the same speeds
+  var mu = 0;
+  tortoise = x0;
+  while (tortoise !== hare) {
+    tortoise = f(tortoise);
+    hare = f(hare);
+    mu++;
+  }
+
+  // Find the length of the shortest cycle starting from x_mu
+  // The hare moves while the tortoise stays still
+  var lam = 1;
+  hare = f(tortoise);
+  while (tortoise !== hare) {
+    hare = f(hare)
+    lam++;
+  }
+
+  return [lam, mu, tortoise];
+}
+
+function brent(f, x0) {
+  // main phase: search successive powers of two
+  var power = 1,
+      lam = 1,
+      tortoise = x0,
+      hare = f(x0);
+  while (tortoise !== hare) {
+    if (power == lam) { // time to start a new power of two?
+      tortoise = hare;
+      power *= 2;
+      lam = 0;
+    }
+    hare = f(hare);
+    lam++;
+  }
+
+  // Find the position of the first repetition of length lambda
+  var mu = 0;
+  tortoise = hare = x0;
+  for (var i = 0; i < lam; ++i) hare = f(hare);
+  while (tortoise !== hare) {
+    tortoise = f(tortoise);
+    hare = f(hare);
+    mu++;
+  }
+
+  return [lam, mu, tortoise];
+}
+
+function pow(f, x0, n) {
+  var i = -1;
+  while (++i < n) x0 = f(x0);
+  return x0;
+}
+</script>
+</p>
+</body>
+</html>
