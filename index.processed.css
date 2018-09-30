@@ -1,0 +1,389 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+
+* body {
+
+	margin:0;
+	background-image: url('img/jungle.jpg');
+	background-color: grey;
+	background-blend-mode: multiply;
+	height: 100%;
+	width: 100%;
+	background-repeat: repeat;
+	background-size:cover;
+	background-position: center;
+	position: absolute;
+	font-family: Raleway,sans-serif;
+	line-height: 170%/1.7em;
+	font-size: 17pt;
+	color: #606c71 lighten(black, 40%);
+	font-weight: normal;
+	padding: 0;
+	text-align: justify;
+}
+
+img { mix-blend-mode: multiply; }
+
+html {
+	background: #DEF;
+        background: -moz-linear-gradient(45deg, #EFF, #DEF);
+        background: -ms-linear-gradient(45deg, #EFF, #DEF);
+        background: -webkit-linear-gradient(45deg, #EFF, #DEF);
+        background: linear-gradient(45deg, #EFF, #DEF);
+        min-height: 100%;
+        font-family: "Open Sans", Helvetica, sans-serif;
+        font-weight: 300;
+}
+
+* > em:first-child{
+font-family: 'Carter One', cursive;
+font-style: normal;
+font-weight: bold;
+text-align: center;
+font: 240%/2.4em;
+color: white;
+padding-bottom: 1px;
+border-bottom: 1px dotted #ddd;
+}
+        
+        h1,
+        h2 {
+            font-weight: 400;
+            text-shadow: 0 1px 0 #FFF;
+        }
+        
+        h1 {
+            width: 70%;
+            margin: 0 auto;
+        }
+               
+        .abstract {
+            margin-top: 10px;
+            font-weight: 250;
+            color: lighten(black, 40%);
+            font-style: normal;
+            background-color: yellow;
+        }
+        
+        .topnav {
+            position: fixed;
+            top: 0px;
+            margin-top: 0;
+            padding-top: 0;
+            width: 100%;
+            box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+        
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        ul.topnav li {
+            float: left;
+        }
+        
+        ul.topnav li a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        
+        ul.topnav li a:hover {
+            background-color: #111;
+        }
+        
+        ul.topnav li.icon {
+            display: none;
+        }
+
+        /* ordered lists in 'tablet' paragraphs */
+        
+        ol {
+            margin-left: 20%;
+        }
+        
+        ol li::marker {
+            content: "(" counter(list-item, lower-roman) ")";
+        }
+        
+        ol li {
+            display: list-item;
+        }
+        
+        div #tablet {
+            margin-top: 10%;
+            color: #666;
+            margin-left: 20%;
+            width: 60%;
+        }
+        
+        .blockquoteTop {
+            font-family: Sans, Arial, Helvetica;
+            color: lighten(#ddd, 20%);
+            /* padding-top: 5px;
+            margin-top: 25px; */
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-bottom: 5%;
+            font-size: 10px;
+            /* display: block; */
+            position: relative;
+            -webkit-animation-name: blockquoteTop;
+            -webkit-animation-duration: 1s;
+            animation-name: blockquoteTop;
+            animation-duration: 1s
+        }
+        
+        @-webkit-keyframes blockquoteTop {
+            from {
+                top: 0px;
+                opacity: 0
+            }
+            to {
+                top: 10px;
+                opacity: 1
+            }
+        }
+        
+        @keyframe blockquoteTop {
+            from {
+                top: 0px;
+                opacity: 0
+            }
+            to {
+                top: 10px;
+                opacity: 1
+            }
+        }
+        
+        .animate {
+            position: relative;
+            -webkit-animation-name: animate;
+            -webkit-animation-duration: 1s;
+            animation-name: animate;
+            animation-duration: 1s
+        }
+        
+        @-webkit-keyframes animate {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+        
+        @keyframe animate {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+ 
+            h1,
+            h2 {
+                font-weight: 400;
+                text-shadow: 0 1px 0 #FFF;
+            }
+            h1 {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+.content{
+
+color: white;
+
+font-family: Verdana, Sans-serif;
+
+font-size: 11px;
+
+font-weight: normal;
+
+text-align: justify;
+
+margin-left: 0em;
+
+TEXT: #FFFFFF;
+
+}
+
+.qanda {
+
+	font-size: 10pt;
+
+	font-weight: bold;
+
+}
+
+p {
+
+font: 300 13px/20px Helvetica, Sans-serif, Arial;
+
+color: #FFFFFF;
+
+font-weight: normal;
+
+}
+
+table {
+
+margin-top: 75px;
+
+width: 350px;
+
+height: 80px;
+
+border-bottom: 1px dotted #fff;
+
+}
+
+.qandaTtl {
+
+	
+
+	font-size: 14pt;
+
+	background-color: #FFCC66;	
+
+}
+
+        @media screen and (max-width:600px) {
+
+
+
+}
+
+        @media screen and (max-width:680px) {
+
+* body {
+
+	margin:0;
+	background-image: url('assets/img/jungle.jpg');
+	background-color: grey;
+	background-blend-mode: multiply;
+	height: 200%;
+	width: 200%;
+	background-repeat: repeat;
+	background-size:cover;
+	background-position: center;
+	position: absolute;
+	font-family: Raleway,sans-serif;
+	line-height: 170%/1.7em;
+	font-size: 17pt;
+	color: #606c71 lighten(black, 40%);
+	font-weight: normal;
+	padding: 0;
+	text-align: justify;
+}
+
+.qanda {
+
+	font-size: 24pt;
+
+	font-weight: bold;
+
+}
+
+p {
+
+font: 400 23px/30px Helvetica, Sans-serif, Arial;
+
+color: #FFFFFF;
+
+font-weight: normal;
+
+}
+          
+          ul.topnav li:not(:first-child) {
+                display: none;
+            }
+            ul.topnav li.icon {
+                float: right;
+                display: inline-block;
+            }
+            /* ordered lists in 'tablet' paragraphs */
+            ol {
+                margin-left: 10%;
+            }
+            ol li::marker {
+                content: "(" counter(list-item, lower-roman) ")";
+            }
+            ol li {
+                display: list-item;
+            }
+            div #tablet {
+                /*top: 20px; */
+                color: #666;
+                margin-left: 10%;
+                width: 75%;
+                border-left: solid 1px #ccc;
+                padding-left: 20px;
+            }
+            .blockquoteTop {
+                margin-left: 10%;
+            }
+          
+            div #tablet {
+                /* top: 20px; */
+                color: #666;
+                margin-left: 10%;
+                width: 75%;
+                border-left: solid 1px #ccc;
+                padding-left: 20px;
+            }
+            .blockquoteTop {
+                margin-left: 10%;
+            }
+        }
+        
+        #topframe {
+            position: fixed;
+            top: 0px;
+            left: 0px: height: 75px;
+            width: 100%;
+            margin-left: 0px;
+            background: white;
+            text-align: right;
+            overflow: hidden;
+        }
+        
+        #footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px: height: 75px;
+            width: 100%;
+            margin-left: 0px;
+            background: white;
+            text-align: right;
+            overflow: hidden;
+            position: fixed;
+            border-top: solid 1px #ccc;
+        }
+        
+        .inner {
+            margin: 10px;
+        }
+        
+        .quote-container {
+            margin: 5% 15% 15% 15%;
+            position: relative;
+		
+        }
